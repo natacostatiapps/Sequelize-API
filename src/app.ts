@@ -16,6 +16,7 @@ app.use((_req, res) => {
   res.status(404).json({ error: 'Rota nao encontrada' });
 });
 
+
 // Middleware de erro (4 argumentos)
 const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
   // ValidationError cobre validacoes do model e UniqueConstraintError

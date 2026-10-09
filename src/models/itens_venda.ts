@@ -25,6 +25,7 @@ export class itens_venda extends Model<itens_vendaAttributes, itens_vendaCreatio
   preco_unitario?: number;
   valor_total?: number;
 
+  
   // itens_venda belongsTo mercadorias via mercadoria_id
   mercadorium!: mercadorias;
   getMercadorium!: Sequelize.BelongsToGetAssociationMixin<mercadorias>;
