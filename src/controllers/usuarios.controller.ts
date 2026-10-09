@@ -66,7 +66,8 @@ export const usuariosController = {
   },
 
   async login(req: Request, res: Response) {
-    const { email, senha } = req.query;
+    // Sem body JSON o Express 5 deixa req.body undefined
+    const { email, senha } = req.body ?? {};
     if (typeof email !== 'string' || typeof senha !== 'string') {
       res.status(400).json({ error: 'Email e senha devem ser strings' });
       return;

@@ -9,7 +9,7 @@ import { autenticar } from './utils/http';
 const routes = Router();
 
 // Rota publica; todas as registradas abaixo de routes.use(autenticar) exigem token
-routes.get('/login', usuariosController.login);
+routes.post('/login', usuariosController.login);
 routes.use(autenticar);
 
 routes.get('/usuarios', usuariosController.index);
